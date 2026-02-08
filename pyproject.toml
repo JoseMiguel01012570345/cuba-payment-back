@@ -1,0 +1,27 @@
+[project]
+name = "cuba-payment-back"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Jose Miguel",email = "jmperezperez25@gmail.com"},
+    {name = "Yasdiel Alejandro",email = "yasdielalejandro@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi (>=0.128.5,<0.129.0)",
+    "uvicorn (>=0.40.0,<0.41.0)"
+]
+
+[tool.poetry]
+packages = [
+    {include = "cuba_payment_back"}
+]
+
+[tool.poetry.scripts]
+start = "cuba_payment_back.cli:start"
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
